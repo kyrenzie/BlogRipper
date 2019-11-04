@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Http.Features
+
+<div id="content">
+    <div id="content-inner">
+        <div id="alpha">
+            <div id="alpha-inner">
+                <div id="entry-2650" class="entry-asset asset hentry">
+                     <div>&nbsp;</div> 
+                    
+                       <div class="asset-header" style=" padding: 10px;">
+                           <h1 id="page-title" class="asset-name entry-title" style=" margin: 10px 0 5px 0;">
+                               <!-- {mmddyy}_{brand}.shtml -->
+                            <p>@Model.Date.ToString("MM-dd-yy")</p>
+                             <a href="@Model.PlanUrl">@Html.Raw(@Model.Title)</a>
+                           </h1>
+                    <div class="asset-meta"></div>
+                                            <div class="asset-content entry-content">
+                                                <div class="asset-body">
+                                                <!-- images/{mmddyy}_{brand}_promo.png -->
+                                                <img src="@Model.PlanImage" align="right" width="288">
+                                                        <br>The Offers:
+                                                        <br>
+                                                        <br>
+                                                        <ul style="padding-left:20px;">
+                                                            <li style="list-style-type:disc;">
+                                                                @Model.Paragraph1
+                                                            </li>
+                                                            <br>
+                                                        </ul>
+                                                       
+                                                <p>@Model.Paragraph2</p>
+                    									<br>
+                                                <br>
+                    							
+                                                <p>@Html.Raw(@Model.Paragraph3)</p>
+                                                    <br>
+                                                    <br>
+                                                    <span class="noprint">
+                                                        <p>@Html.Raw(@Model.Paragraph4)</p>
+                                                        <br>This information is provided by Co>Op Connect to assist you in selling more advertising, both to new and existing clients. Use it to take a complete advertising solution to your local retailers.
+                                                        <br>
+                                                        <br>
+                                                        <!-- {mmddyy}_{brand}_print.shtml -->
+                                                        <a href="@Model.PrintUrl"><img alt="Print this Promo" src="/blog/images/print_blog.png"></a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

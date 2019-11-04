@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66838cb4-5143-42b7-ae4d-dd5f1e30196b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BlogRipper.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Areas/Identity/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/BlogRipper.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Data/Migrations/00000000000000_CreateIdentitySchema.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Error.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Error.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Privacy.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Privacy.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Shared/_CookieConsentPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/Startup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/WordPressHTMLField.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/WordPressPost.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/app.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/app.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogRipper/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="91" column="53" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
+              <folding>
+                <marker date="1563282597806" expanded="false" signature="6:404" ph="..." />
+                <marker date="1563282597806" expanded="true" signature="432:5593" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="474:5591" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="698:742" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="774:3176" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="1401:3166" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="2055:2291" ph="/* var x = postDom.GetElementsByTagName() ... */" />
+                <marker date="1563282597806" expanded="true" signature="2728:2835" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="3230:3456" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="3516:5585" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="3552:3689" ph="/* var pattern = @&quot;http.*app.coopconnect.com.*plan_id=(?&lt;Identifier&gt;[0-9]*)&quot;; ... */" />
+                <marker date="1563282597806" expanded="true" signature="3922:4002" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="4239:4472" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="4514:4662" ph="/* Use Regex.Replace for more flexibility. ... */" />
+                <marker date="1563282597806" expanded="true" signature="4985:5575" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="5121:5464" ph="{...}" />
+                <marker date="1563282597806" expanded="true" signature="5485:5561" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <marker date="1563282344222" expanded="false" signature="6:518" ph="..." />
+                <marker date="1563282344222" expanded="true" signature="540:2542" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="567:2540" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="627:690" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="912:1723" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="998:1262" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="1911:2534" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="1958:2079" ph="{...}" />
+                <marker date="1563282344222" expanded="true" signature="2096:2350" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <marker date="1563282344169" expanded="true" signature="24:65" ph="@..." />
+                <marker date="1563282344169" expanded="true" signature="152:264" ph="@..." />
+                <marker date="1563282344169" expanded="true" signature="196:264" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/WordPressPost.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <folding>
+                <marker date="1563282329038" expanded="false" signature="6:125" ph="..." />
+                <marker date="1563282329038" expanded="true" signature="147:1058" ph="{...}" />
+                <marker date="1563282329038" expanded="true" signature="199:1056" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_MGOPartial.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_RABPartial.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cookieConsent</find>
+      <find>post</find>
+      <find>mode</find>
+      <find>usb-sab</find>
+      <find>props</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Model</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/WordPressPost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_MGOPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Areas/Identity/Pages/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/WordPressHTMLField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_RABPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_CookieConsentPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BlogRipper/BlgoData.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/BlogData.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/Program.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/Startup.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/WordPressPost.ca.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/WordPressHTMLField.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml" />
+        <option value="$PROJECT_DIR$/BlogRipper/WordPressPost.cs" />
+        <option value="$PROJECT_DIR$/BlogRipper/Pages/Shared/_RABPartial.cshtml" />
+        <option value="$PROJECT_DIR$/BlogRipper/Pages/Shared/_MGOPartial.cshtml" />
+        <option value="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.BlogRipper/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.BlogRipper/.idea/indexLayout.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="240" />
+    <option name="y" value="162" />
+    <option name="width" value="1440" />
+    <option name="height" value="787" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NETCoreApp 2.2" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlogRipper" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NETCoreApp 2.2" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Packages" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.BlogRipper">
+    <configuration name="BlogRipper" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BlogRipper/BlogRipper.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="BlogRipper" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogRipper: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BlogRipper/BlogRipper.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66838cb4-5143-42b7-ae4d-dd5f1e30196b" name="Default Changelist" comment="" />
+      <created>1559763199940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559763199940</updated>
+      <workItem from="1559763203730" duration="5104000" />
+      <workItem from="1559829518624" duration="8320000" />
+      <workItem from="1559922049836" duration="7881000" />
+      <workItem from="1559944047879" duration="555000" />
+      <workItem from="1560178106574" duration="23576000" />
+      <workItem from="1560281787036" duration="1722000" />
+      <workItem from="1560545698945" duration="485000" />
+      <workItem from="1560547622167" duration="621000" />
+      <workItem from="1560784378251" duration="2510000" />
+      <workItem from="1560808048734" duration="258000" />
+      <workItem from="1561398837534" duration="960000" />
+      <workItem from="1561476515265" duration="618000" />
+      <workItem from="1561484519883" duration="11284000" />
+      <workItem from="1562076937652" duration="2138000" />
+      <workItem from="1562100323568" duration="959000" />
+      <workItem from="1562680072401" duration="736000" />
+      <workItem from="1562687350373" duration="683000" />
+      <workItem from="1563281854537" duration="251000" />
+      <workItem from="1563282462376" duration="623000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="69284000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.42243436" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.64992154" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="NuGet" order="7" visible="true" weight="0.32970452" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="REST Client" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32970452" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.3273717" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs</url>
+          <line>126</line>
+          <properties documentPath="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs" initialLine="108">
+            <startOffsets>
+              <option value="4875" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4889" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs</url>
+          <line>110</line>
+          <properties documentPath="$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs" initialLine="89">
+            <startOffsets>
+              <option value="4028" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4052" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BlogRipper/BlogData.cs" />
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Areas/Identity/Pages/_ViewStart.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1559763194689" expanded="true" signature="0:49" ph="@..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <marker date="1559769810289" expanded="true" signature="6:395" ph="..." />
+            <marker date="1559769810289" expanded="true" signature="417:805" ph="{...}" />
+            <marker date="1559769810289" expanded="true" signature="444:803" ph="{...}" />
+            <marker date="1559769810289" expanded="true" signature="509:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/WordPressHTMLField.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <marker date="1559924809359" expanded="true" signature="6:55" ph="..." />
+            <marker date="1559924809359" expanded="true" signature="77:201" ph="{...}" />
+            <marker date="1559924809359" expanded="true" signature="117:199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_CookieConsentPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1559763194697" expanded="true" signature="43:240" ph="@..." />
+            <marker date="1559763194697" expanded="true" signature="242:990" ph="@..." />
+            <marker date="1559763194697" expanded="true" signature="258:990" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="43" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/256455FD-EBD2-4B21-8EEA-3162BD0EB334/12/f893da09/Regex.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85F7F091-0238-4ACC-8274-30ACF6B89567/5d/5777de9d/HttpUtility.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/256455FD-EBD2-4B21-8EEA-3162BD0EB334/f3/b397476b/Match.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8246F26C-6C11-487F-9FE9-3C9A8FB2C1BC/4e/de576408/PageActionInvoker.cs" />
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="91" column="53" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
+          <folding>
+            <marker date="1563282597806" expanded="false" signature="6:404" ph="..." />
+            <marker date="1563282597806" expanded="true" signature="432:5593" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="474:5591" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="698:742" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="774:3176" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="1401:3166" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="2055:2291" ph="/* var x = postDom.GetElementsByTagName() ... */" />
+            <marker date="1563282597806" expanded="true" signature="2728:2835" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="3230:3456" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="3516:5585" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="3552:3689" ph="/* var pattern = @&quot;http.*app.coopconnect.com.*plan_id=(?&lt;Identifier&gt;[0-9]*)&quot;; ... */" />
+            <marker date="1563282597806" expanded="true" signature="3922:4002" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="4239:4472" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="4514:4662" ph="/* Use Regex.Replace for more flexibility. ... */" />
+            <marker date="1563282597806" expanded="true" signature="4985:5575" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="5121:5464" ph="{...}" />
+            <marker date="1563282597806" expanded="true" signature="5485:5561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <marker date="1563282344222" expanded="false" signature="6:518" ph="..." />
+            <marker date="1563282344222" expanded="true" signature="540:2542" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="567:2540" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="627:690" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="912:1723" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="998:1262" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="1911:2534" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="1958:2079" ph="{...}" />
+            <marker date="1563282344222" expanded="true" signature="2096:2350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <marker date="1563282344169" expanded="true" signature="24:65" ph="@..." />
+            <marker date="1563282344169" expanded="true" signature="152:264" ph="@..." />
+            <marker date="1563282344169" expanded="true" signature="196:264" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/WordPressPost.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <marker date="1563282329038" expanded="false" signature="6:125" ph="..." />
+            <marker date="1563282329038" expanded="true" signature="147:1058" ph="{...}" />
+            <marker date="1563282329038" expanded="true" signature="199:1056" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_MGOPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogRipper/Pages/Shared/_RABPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
