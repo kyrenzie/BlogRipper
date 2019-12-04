@@ -12,6 +12,9 @@ namespace BlogRipper
         [JsonProperty("plan_url")]
         public string PlanUrl { get; set; }
 
+        [JsonProperty("brand")]
+        public string Brand { get; set; }
+
         [JsonProperty("print_url")]
         public string PrintUrl { get; set; }
 
