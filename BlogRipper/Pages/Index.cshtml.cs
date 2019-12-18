@@ -31,8 +31,9 @@ namespace BlogRipper.Pages
             var jsonData = client.GetStringAsync(baseurl).Result;
             //https://www.newtonsoft.com/json/help/html/ParseJsonAny.htm+
 
-            //Mode sets which mode the scraper will act in. 1 = Recas Rab Site, 2 = Media Group Online, 3 = Automatically Download last weeks images and set links to them.
-            var mode = 3;
+            //Mode sets which mode the scraper will act in. 1 = Recas Rab Site, 2 = Media Group Online, 
+            //3 = Geneate RAB files, 4 = Generate MGO files.
+            var mode = 4;
 
             JArray postArray = JArray.Parse(jsonData); //https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
                                                        //[] items = postArray.ToObject<WordPressPost[]>();
@@ -114,20 +115,39 @@ namespace BlogRipper.Pages
 
                 if (ps[0].ChildNodes.Count <= 2)
                 {
-                    post.PlanImage = ps[0].ChildNodes[0].Attributes["src"].Value;
+
+                    if (ps[0].ChildNodes[0].Attributes.Count > 0)
+                    {
+                        post.PlanImage = ps[0].ChildNodes[0].Attributes["src"].Value;
+                    }
+
                 }
 
                 Posts.Add(post);
             }
-            if (mode == 3)
+            if (mode == 3 || mode == 4)
             {
-                for (int i = 0; i < 10; i++)
+                int length;
+                if (mode == 3)
                 {
+                    length = 10;
+                }
+                else
+                {
+                    length = 1;
+                }
+                
+                for (int i = 0; i < length; i++)
+                {
+                    if (!string.IsNullOrEmpty(Posts[i].PlanImage)) {
                     Posts[i].PlanImage = "images/" + ImageDownload(Posts[i].PlanImage, Posts[i].Brand, path, date);
-                    WriteHTML(path, date, Posts[i]);
+                    }
+                    WriteHTML(path, date, Posts[i], mode);
+                    WritePrint(path, date, Posts[i], mode);
                 }
             }
         }
+
 
         public string AddBreak(string p)
         {
@@ -143,9 +163,13 @@ namespace BlogRipper.Pages
             return dt.AddDays(-1 * diff).Date;
         }
 
-        public void WriteHTML(string path, string date, WordPressPost Posts)
+        public void WriteHTML(string path, string date, WordPressPost Posts, int mode)
         {
-            string lines = @"<!DOCTYPE html>
+            string lines = "";
+            string type = "";
+            string end = "";
+            if (mode == 3) { 
+            lines = @"<!DOCTYPE html>
             <html lang = 'en'>
             <head>
                 <meta http - equiv = ""content - type"" content = ""text / html; charset = utf - 8"" >
@@ -153,36 +177,36 @@ namespace BlogRipper.Pages
                 <link rel = ""stylesheet"" type = ""text/css"" href = ""/images/newlook/css/print.css"" title = ""printpage"" media = ""print"" >
                 <link rel = ""stylesheet"" type = ""text/css"" media = ""screen"" href = ""/images/newlook/css/thickbox.css"" >
                 <script type = ""text/javascript"" src = ""/images/newlook/js/jquery-1.2.6.min.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/newlook/js/thickbox-compressed2.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/newlook/js/jquery.newsticker.pack.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/searches/javascript/headersearch.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/searches/javascript/popupurl.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/searches/javascript/searchCookies.js"" >
-            </script >
-                <script type = ""text/javascript"" src = ""/images/searches/javascript/addEngine.js"" >
-            </script >
-                <title ></title >
-            </head >
-            <body >
-                <div id = ""pageBackground"" >
-                    <div id = ""pageMain"" >
-                        <div id = ""headerWrap"" >
-                            <a href = ""http://www.rab.com"" ><img src = ""/images/newlook/header/coop-1.jpg"" alt = ""MultiAd Logo"" ></a >
+            </script>
+                <script type = ""text/javascript"" src = ""/images/newlook/js/thickbox-compressed2.js"">
+            </script>
+                <script type = ""text/javascript"" src = ""/images/newlook/js/jquery.newsticker.pack.js"">
+            </script>
+                <script type = ""text/javascript"" src = ""/images/searches/javascript/headersearch.js"">
+            </script>
+                <script type = ""text/javascript"" src = ""/images/searches/javascript/popupurl.js"">
+            </script>
+                <script type = ""text/javascript"" src = ""/images/searches/javascript/searchCookies.js"">
+            </script>
+                <script type = ""text/javascript"" src = ""/images/searches/javascript/addEngine.js"">
+            </script>
+                <title ></title>
+            </head>
+            <body>
+                <div id = ""pageBackground"">
+                    <div id = ""pageMain"">
+                        <div id = ""headerWrap"">
+                            <a href = ""http://www.rab.com"" ><img src = ""/images/newlook/header/coop-1.jpg"" alt = ""MultiAd Logo"" ></a>
                             <div id = ""headerSearch"" >
-                                <form action = """" name = ""search_form"" onsubmit = ""return search_submit(document.search_form);"" target = ""_top"" >
+                                <form action = """" name = ""search_form"" onsubmit = ""return search_submit(document.search_form);"" target = ""_top"">
                                     <div>
                                         <input type = ""text"" class=""quickSearchField"" name=""keywords"" value=""Quick Co-op Search"" onfocus=""if (value == 'Quick Co-op Search') {value ='' }"" onblur=""if (value == '') {value = 'Quick Co-op Search' }""> <input type = ""submit"" value=""Search"" class=""headerSearchSubmitButton""> <input type = ""hidden"" name=""search_value"" value=""""> <input type = ""hidden"" name=""find_plan"" value=""""> <input type = ""hidden"" name=""search_field"" value=""""> <input type = ""hidden"" name=""search_type"" value=""""> <input type = ""hidden"" name=""schema"" value=""__schema__""> <input type = ""hidden"" name=""schema1"" value=""__schema1__""> <input type = ""hidden"" name=""quick_search"" value=""1""> <input type = ""hidden"" name=""record_index"" value=""""> <input type = ""hidden"" name=""func"" value="""">
                                     </div>
-                                </form><script type = ""text/javascript"" >
+                                </form><script type = ""text/javascript"">
             setButtons();
                                 </script>
                             </div>
-                            <div id = ""headerTabs"" >
+                            <div id = ""headerTabs"">
                                 <ul >
                                     <li>
                                         <a href=""/coop_search_form"">Co-op Advertising Home</a>
@@ -196,26 +220,77 @@ namespace BlogRipper.Pages
                                     <li>
                                         <a href = ""/training"" > Tutorials </a >
 
-                                                    </li >
-                                                </ul >
-                                            </div >
-                                        </div >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id= ""content"" >
-                                        <div id= ""content-inner"" >
-                                            <div id= ""alpha"" >
-                                                <div id= ""alpha-inner"" >
+                                    <div id= ""content"">
+                                        <div id= ""content-inner"">
+                                            <div id= ""alpha"">
+                                                <div id= ""alpha-inner"">
                                                     <div id= ""entry-2650"" class=""entry-asset asset hentry"">
                                                         <div>&nbsp;</div> 
                                                         <div class=""asset-header"" style="" padding: 10px;"">
                                                     <h1 id = ""page-title"" class=""asset-name entry-title"" style="" margin: 10px 0 5px 0;"">
                                                         <!-- {mmddyy}_{brand}.shtml -->";
-            using (FileStream fs = new FileStream(path + "\\" + date + "_" + Posts.Brand + ".html", FileMode.Create))
+                type = ".html";
+                end = "</html>";
+            }
+            else if (mode == 4)
+            {
+                lines = @"<!DOCTYPE html>
+                        <shtml lang=""en"">
+                        <head>
+                            <meta http-equiv = ""content-type"" content = ""text/html; charset=utf-8"">
+                                    <link rel = ""stylesheet"" type = ""text/css"" media = ""screen"" href = ""/images/newlook/css/main.css"">           
+                                        <link rel = ""stylesheet"" type = ""text/css"" href = ""/images/newlook/css/print.css"" title = ""printpage"" media = ""print"" >           
+                                                    <link rel = ""stylesheet"" type = ""text/css"" media = ""screen"" href = ""/images/newlook/css/thickbox.css"" >
+                                                        <script type = ""text/javascript"" src = ""/images/newlook/js/jquery-1.2.6.min.js"" >
+                                                            </script>
+                                                            <script type = ""text/javascript"" src = ""/images/newlook/js/thickbox-compressed2.js"">
+                                                                </script>
+                                                                <script type = ""text/javascript"" src = ""/images/newlook/js/jquery.newsticker.pack.js"" >
+                                                                    </script>
+                                                                    <script type = ""text/javascript"" src = ""/images/searches/javascript/headersearch.js"" >
+                                                                    </script>
+                                                                    <script type = ""text/javascript"" src = ""/images/searches/javascript/popupurl.js"" >
+                                                                        </script>
+                                                                        <script type = ""text/javascript"" src = ""/images/searches/javascript/searchCookies.js"" >
+                                                                            </script>
+                                                                            <script type = ""text/javascript"" src = ""/images/searches/javascript/addEngine.js"" >
+                                                                                </script>
+                                                                            </head>
+
+                                                                            <body>
+                                                                                <div id = ""pageBackground"">
+                                                                                    <div id = ""pageMain"">
+                                                                                        <div id = ""headerWrap"">
+                                                                                                <standard_header>
+                                                                                                <!--#include virtual=""/headers/header.html"" -->
+				                                                                    </standard_header>
+                                                    
+                                                                                        </div>
+                                                                                    </div>
+                                                                                        <div id = ""content"">
+                                                                                                <div id = ""content-inner"">
+                                                                                                    <div id = ""alpha"" >
+                                                                                                        <div id = ""alpha-inner"" >
+                                                                                                            <div id = ""entry-2650"" class=""entry-asset asset hentry"">
+                                                            <div>&nbsp;</div> 
+                                
+                                                            <div class=""asset-header"" style="" padding: 10px;"">
+                                                                <h1 id = ""page-title"" class=""asset-name entry-title"" style="" margin: 10px 0 5px 0;"">
+                                                                    <!-- {mmddyy}_{brand}.shtml -->";
+                type = ".shtml";
+                end = "</shtml>";
+            }
+            using (FileStream fs = new FileStream(path + "\\" + date + "_" + Posts.Brand + type, FileMode.Create))
             {
                 using (StreamWriter w = new StreamWriter(fs, Encoding.UTF8))
                 {
                     w.WriteLine(lines);
-                    w.WriteLine("<a href=\"" + date + "_" + Posts.Brand + ".html\">" + Posts.Title + "</a>");
+                    w.WriteLine("<a href=\"" + date + "_" + Posts.Brand + type + "\">" + Posts.Title + "</a>");
                     w.WriteLine(@" </h1>
                                 <div class=""asset-meta""></div>
                                 <div class=""asset-content entry-content"">
@@ -239,20 +314,79 @@ namespace BlogRipper.Pages
                                             <br> ");
                     w.WriteLine("<a href=\"" + date + "_" + Posts.Brand + "_print.html\">" + "<img alt=\"Print this Promo\" src=\"/blog/images/print_blog.png\"></a>");
                     w.WriteLine(@"                      </span>
-                                                    </div >
-                                                </div >
-                                            </div >
-                                        </div >
-                                    </div >
-                                </div >
-                            </div >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div >
                         </div ><!--#include virtual=""/analytics.html""-->
-                    </body>
-                </html> ");
+                    </body>");
+                    w.WriteLine(end);
                 }
             }
 
+        }
+
+        public void WritePrint(string path, string date, WordPressPost Posts, int mode)
+        {
+            string type = "";
+            if (mode == 3)
+            {
+                type = ".html";
+            }
+            if (mode == 4 )
+            {
+                type = ".shtml";
+            }
+            string header = @"<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN""
+            ""http&#58;//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
+            <html xmlns = ""http://www.w3.org/1999/xhtml"">
+                <head>
+                     <meta http-equiv =""Content-Type"" content =""text/html; charset=UTF-8"" >
+                     <title>";
+
+            string footer = @"                                  <br>This information is provided by Co>Op Connect to assist you in selling more advertising, both to new and existing clients. Use it to take a complete advertising solution to your local retailers.
+                                                                <br>
+                                                                <br>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </body>
+                                    </html> ";
+
+            using (FileStream fs = new FileStream(path + "\\" + date + "_" + Posts.Brand + "_print" + type, FileMode.Create))
+            {
+                using (StreamWriter w = new StreamWriter(fs, Encoding.UTF8))
+                {
+                    w.WriteLine(header);
+                    w.WriteLine("Blog: " + Posts.Title + ": Print This");
+                    w.WriteLine(@"      </title>  
+                                        <link rel=""stylesheet"" href=""http://recas.com/blog/PF-stylesheet.css"" type=""text/css"">
+                                      </head>
+                                      <body>
+                                         <div id = ""container"">
+                                              <div class=""entry"">
+                                                  <h1 class=""entry-header"">");
+                    w.WriteLine("<strong>" + Posts.Title + "</strong>");
+                    w.WriteLine(@"               </h1>
+                                                 <div class=""entry-content"">");
+                    w.WriteLine("<img src=\"images/" + date + "_" + Posts.Brand + "_promo.png\" align =\"right\" width =\"288\"> ");
+                    w.WriteLine(@"                        <br>
+                                                            The Offers: <br><br>");
+                    w.WriteLine(Posts.Paragraph1 + "<br>");
+                    w.WriteLine(Posts.Paragraph2);
+                    w.WriteLine(@"                             <br>
+                                                               <br>
+                                                               <span class=""noprint"">");
+                    w.WriteLine("<p>" + Posts.Paragraph4 + "</p>");
+                    w.WriteLine(footer);
+
+                }
+            }
         }
 
         public string ImageDownload(string imgURL, string brand, string path, string date)
@@ -286,7 +420,7 @@ namespace BlogRipper.Pages
             Partial = "_RABPartial";
             Extension = ".html";
             string replaceWith = "http://rab.recas.com/search?channel_id=301&func=search&keywords=" + id.PadLeft(6, '0') + '"';
-            if (mode == 2)
+            if (mode == 2 || mode == 4)
             {
                 Partial = "_MGOPartial";
                 replaceWith = "http://mediagrouponlineinc.recas.com/search.mp?show_plan=" + id + "&schema=u&schema1=y" + '"';
