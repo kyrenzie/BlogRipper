@@ -33,7 +33,8 @@ namespace BlogRipper.Pages
 
             //Mode sets which mode the scraper will act in. 1 = Recas Rab Site, 2 = Media Group Online, 
             //3 = Geneate RAB files, 4 = Generate MGO files.
-            var mode = 4;
+            var mode = 3;
+            List<string> brands = new List<string>();
 
             JArray postArray = JArray.Parse(jsonData); //https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
                                                        //[] items = postArray.ToObject<WordPressPost[]>();
@@ -136,14 +137,23 @@ namespace BlogRipper.Pages
                 {
                     length = 1;
                 }
-                
-                for (int i = 0; i < length; i++)
+
+                for (int k = 0; k < length; k++)
                 {
-                    if (!string.IsNullOrEmpty(Posts[i].PlanImage)) {
-                    Posts[i].PlanImage = "images/" + ImageDownload(Posts[i].PlanImage, Posts[i].Brand, path, date);
+                    if (Array.IndexOf(brands.ToArray(), Posts[k].Brand) >= 0)
+                    {
+                        Posts[k].Brand = Posts[k].Brand.ToString() + "1";
+                        brands.Add(Posts[k].Brand);
                     }
-                    WriteHTML(path, date, Posts[i], mode);
-                    WritePrint(path, date, Posts[i], mode);
+                    else
+                    {
+                        brands.Add(Posts[k].Brand);
+                    }
+                    if (!string.IsNullOrEmpty(Posts[k].PlanImage)) {
+                    Posts[k].PlanImage = "images/" + ImageDownload(Posts[k].PlanImage, Posts[k].Brand, path, date);
+                    }
+                    WriteHTML(path, date, Posts[k], mode);
+                    WritePrint(path, date, Posts[k], mode);
                 }
             }
         }
