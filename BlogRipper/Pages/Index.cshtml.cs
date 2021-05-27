@@ -33,14 +33,14 @@ namespace BlogRipper.Pages
 
             //Mode sets which mode the scraper will act in. 1 = Recas Rab Site, 2 = Media Group Online, 
             //3 = Geneate RAB files, 4 = Generate MGO files.
-            var mode = 3;
+            var mode = 4;
             List<string> brands = new List<string>();
 
             JArray postArray = JArray.Parse(jsonData); //https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
                                                        //[] items = postArray.ToObject<WordPressPost[]>();
 
             var date = StartOfWeek().ToString("MMddyy");
-            string path = @"C:\Users\kyler\Documents\LSA" + "\\" + date;
+            string path = @"C:\Users\admin_colino\Documents\LSA" + "\\" + date;
             Posts = new List<WordPressPost>();
 
             for (int i = 0; i < postArray.Count; i++)
@@ -178,6 +178,7 @@ namespace BlogRipper.Pages
             string lines = "";
             string type = "";
             string end = "";
+
             if (mode == 3) { 
             lines = @"<!DOCTYPE html>
             <html lang = 'en'>
@@ -417,7 +418,7 @@ namespace BlogRipper.Pages
         {
 
             // var pattern = @"http.*app.coopconnect.com.*plan_id=(?<Identifier>[0-9]*)";
-            // var id = Regex.Match(v, pattern).NextMatch();
+            // var id = Regex.Match(v, pattern).NextMatch(); ...
 
             Regex expression = new Regex(@"http.*app.coopconnect.com.*plan_id=(?<plan_id>[0-9]*)");
             var results = expression.Matches(v);
@@ -429,7 +430,7 @@ namespace BlogRipper.Pages
 
             Partial = "_RABPartial";
             Extension = ".html";
-            string replaceWith = "http://rab.recas.com/search?channel_id=301&func=search&keywords=" + id.PadLeft(6, '0') + '"';
+            string replaceWith = "http://rab.recas.com/coop_search/search.mp?show_plan=" + id.PadLeft(6, '0') + "&schema=u&schema1=y" + '"';
             if (mode == 2 || mode == 4)
             {
                 Partial = "_MGOPartial";
